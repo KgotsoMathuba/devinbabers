@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev's Hairdo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="group5_styles.css">
+    <style>
+        .contact-form{
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            width : 90%;
+        }
+        .form-container{
+            width: 60%;
+            margin: 20px auto;
+        
+        }
+        .contact-form h2{
+            text-align: center;
+            color: #333;
+        }
+        .form-group{
+            margin-bottom: 15px auto;
+        }
+        .form-group label{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea{
+            width: 92%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group textarea{
+            resize: vertical;
+            height: 100px;
+            
+        }
+        .submit-btn{
+            width:100% ;
+            padding: 10px;
+            background: #0070ff;
+            color:white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f9f9f9;
+          margin: 0;
+          padding: 0;
+        }
+    
+        header {
+          background-color: #333;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+        }
+    
+        h1 {
+          margin: 0;
+        }
+    
+        .container {
+          max-width: 600px;
+          margin: 40px auto;
+          background-color: white;
+          padding: 30px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+        }
+    
+        h2 {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+    
+        label {
+          display: block;
+          margin-top: 15px;
+          font-weight: bold;
+        }
+    
+        input, select, textarea {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+    
+        button {
+          margin-top: 25px;
+          width: 100%;
+          padding: 12px;
+          background-color: #333;
+          color: white;
+          font-size: 18px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+          background-color: #555;
+        }
+    
+        footer {
+          text-align: center;
+          padding: 20px;
+          background-color: #eee;
+          margin-top: 50px;
+        }
+      </style>
+</head>
+<body>
+         <header> <h1>Devin Barbers</h1>
+      <nav>
+        <ul>
+          <li> <a href="index.html">Home | </a></li>
+            <li> <a href="booking.html">Booking |</a></li>
+            <li> <a href="tips.html">Secret Recipe | </a> </li>
+            <li> <a href="reviews.html">Testimonials | </a> </li>
+            <li> <a href="contact_us.html">Contact Us | </a> </li>
+            <li><a href="products.html">Products |</a></li>
+            <li><a href="work.html">Our Services</a></li>   
+        </ul>
+    </nav>
+    </header> 
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f9f9f9;
+          margin: 0;
+          padding: 0;
+        }
+    
+        header {
+          background-color: #333;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+        }
+    
+        .container {
+          max-width: 600px;
+          margin: 40px auto;
+          background-color: rgba(222, 184, 135, 0.4);
+          padding: 30px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          
+
+        }
+    
+    
+        input, select, textarea {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+    
+        button {
+          margin-top: 25px;
+          width: 100%;
+          padding: 12px;
+          background-color: #333;
+          color: white;
+          font-size: 18px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+          background-color: #555;
+        }
+    
+        .confirmation {
+          background-color: #e6ffe6;
+          padding: 20px;
+          border: 1px solid #00cc66;
+          border-radius: 10px;
+          margin-top: 30px;
+          text-align: center;
+          display: none;
+        }
+    
+        footer {
+          text-align: center;
+          padding: 20px;
+          background-color: #eee;
+          margin-top: 50px;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <div class="container">
+        <h2>Book Your Slot Here!</h2>
+        <form id="bookingForm">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" required>
+    
+          <label for="service">Select Service:</label>
+          <select id="service" required>
+            <option value="">-- Choose a Service --</option>
+            <option value="Haircut">Haircut</option>
+            <option value="Fade">Fade</option>
+            <option value="Shave">Shave</option>
+            <option value="Fade and Design">Fade and design</option>
+            <option value="Haircut and Beard">Haircut and beard</option>
+            <option value="Beard trim">Beard Trim</option>
+          </select>
+    
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" required>
+    
+          <label for="time">Preferred Time:</label>
+          <input type="time" id="time" required>
+    
+          <label for="note">Additional Notes (optional):</label>
+          <textarea id="note" rows="4"></textarea>
+    
+          <button type="submit">Book Now</button>
+        </form>
+    
+        <div class="confirmation" id="confirmationBox"></div>
+      </div>
+    
+      <footer>
+        &copy; 2025 Devin's Hairdo. All rights reserved.
+      </footer>
+    
+      <script>
+        const form = document.getElementById('bookingForm');
+        const confirmationBox = document.getElementById('confirmationBox');
+    
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent page reload
+    
+          const name = document.getElementById('name').value;
+          const service = document.getElementById('service').value;
+          const date = document.getElementById('date').value;
+          const time = document.getElementById('time').value;
+          const note = document.getElementById('note').value;
+    
+          // Simple confirmation message
+          confirmationBox.innerHTML = `
+            <h3>Thank you, ${name}!</h3>
+            <p>Your booking for a <strong>${service}</strong> on <strong>${date}</strong> at <strong>${time}</strong> has been confirmed.</p>
+            ${note ? `<p><em>Note:</em> ${note}</p>` : ''}
+          `;
+          confirmationBox.style.display = 'block';
+          form.reset();
+        });
+      </script>
+    </body>
+    </html>
+    
